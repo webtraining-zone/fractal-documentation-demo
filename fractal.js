@@ -15,6 +15,8 @@ fractal.docs.set('path', __dirname + '/src/docs');
 
 fractal.web.set('static.path', __dirname + '/src/static');
 
+fractal.web.set('builder.dest', __dirname + '/dist');
+
 const customTheme = mandelbrot({
   skin: 'navy',
   styles: [
@@ -22,6 +24,8 @@ const customTheme = mandelbrot({
     'default',
     '/css/theme-styles.css',
   ],
+  nav: ['docs', 'components'],
+  panels: ['html', 'info', 'resources'],
 });
 
 customTheme.addLoadPath(__dirname + '/src/theme-overrides');
